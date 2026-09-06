@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Welcome to My Page</title>
+	<style>
+		:root {
+			--ink: #1f2937;
+			--muted: #64748b;
+			--paper: #f8fafc;
+			--panel: #ffffff;
+			--accent: #0f766e;
+			--accent-light: #ccfbf1;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			font-family: Georgia, "Times New Roman", serif;
+			color: var(--ink);
+			background: var(--paper);
+			line-height: 1.6;
+		}
+
+		header {
+			padding: 1.25rem 8%;
+			color: white;
+			background: var(--accent);
+		}
+
+		nav {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			max-width: 1100px;
+			margin: 0 auto;
+		}
+
+		nav a {
+			margin-left: 1rem;
+			color: white;
+			text-decoration: none;
+		}
+
+		nav a:hover {
+			text-decoration: underline;
+		}
+
+		.hero {
+			max-width: 1100px;
+			margin: 0 auto;
+			padding: 5rem 8%;
+			text-align: center;
+		}
+
+		.hero h1 {
+			margin: 0 0 1rem;
+			font-size: clamp(2.5rem, 7vw, 4.5rem);
+			line-height: 1.1;
+		}
+
+		.hero p {
+			max-width: 620px;
+			margin: 0 auto 1.75rem;
+			color: var(--muted);
+			font-size: 1.15rem;
+		}
+
+		.button {
+			display: inline-block;
+			padding: 0.75rem 1.25rem;
+			border-radius: 0.35rem;
+			color: white;
+			background: var(--accent);
+			text-decoration: none;
+		}
+
+		.button:hover {
+			background: #115e59;
+		}
+
+		.features {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 1.25rem;
+			max-width: 1100px;
+			margin: 0 auto;
+			padding: 0 8% 4rem;
+		}
+
+		.card {
+			padding: 1.5rem;
+			border-top: 4px solid var(--accent);
+			background: var(--panel);
+			box-shadow: 0 8px 24px rgb(15 118 110 / 0.08);
+		}
+
+		.card h2 {
+			margin-top: 0;
+		}
+
+		.card p {
+			margin-bottom: 0;
+			color: var(--muted);
+		}
+
+		footer {
+			padding: 1.5rem;
+			color: var(--muted);
+			text-align: center;
+			background: var(--accent-light);
+		}
+
+		@media (max-width: 700px) {
+			nav {
+				align-items: flex-start;
+				flex-direction: column;
+				gap: 0.75rem;
+			}
+
+			nav a {
+				margin: 0 1rem 0 0;
+			}
+
+			.hero {
+				padding-top: 3.5rem;
+			}
+
+			.features {
+				grid-template-columns: 1fr;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<nav aria-label="Main navigation">
+			<strong>My Page</strong>
+			<div>
+				<a href="#about">About</a>
+				<a href="#features">Features</a>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<section class="hero" id="about">
+			<h1>Welcome to My Page</h1>
+			<p>This is a simple example of a webpage built with HTML and CSS.</p>
+			<a class="button" href="#features">Explore the page</a>
+		</section>
+
+		<section class="features" id="features" aria-label="Page features">
+			<article class="card">
+				<h2>Simple</h2>
+				<p>Clean HTML gives the page a clear and meaningful structure.</p>
+			</article>
+			<article class="card">
+				<h2>Readable</h2>
+				<p>CSS controls spacing, color, typography, and responsive layout.</p>
+			</article>
+			<article class="card">
+				<h2>Responsive</h2>
+				<p>The layout adapts to smaller screens using a CSS media query.</p>
+			</article>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2026 My Page</p>
+	</footer>
+</body>
+</html>
